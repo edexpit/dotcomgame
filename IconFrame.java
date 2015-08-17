@@ -1,0 +1,38 @@
+import javax.swing.*;
+
+public class IconFrame extends JFrame {
+
+	JButton load, save, subscribe, unsubscribe;
+
+	public IconFrame()
+	{
+		super("Icon Frame");
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		JPanel panel = new JPanel();
+		//create icons
+		ImageIcon loadIcon = new ImageIcon("C:/Users/Administrator/ExperienceIT/eclipse/workspace/ExperienceIT/src/load.gif");
+		ImageIcon saveIcon = new ImageIcon("C:/Users/Administrator/ExperienceIT/eclipse/workspace/ExperienceIT/src/save.gif");
+		ImageIcon subscribeIcon = new ImageIcon("C:/Users/Administrator/ExperienceIT/eclipse/workspace/ExperienceIT/src/subscribe.gif");
+		ImageIcon unsubscribeIcon = new ImageIcon("C:/Users/Administrator/ExperienceIT/eclipse/workspace/ExperienceIT/src/unsubscribe.gif");
+		//create buttons
+		load = new JButton("Load", loadIcon);
+		save = new JButton("Save", saveIcon);
+		subscribe = new JButton("Subscribe", subscribeIcon);
+		unsubscribe = new JButton("Unsubscribe", unsubscribeIcon);
+		//add button to panel
+		panel.add(load);
+		panel.add(save);
+		panel.add(subscribe);
+		panel.add(unsubscribe);
+		// add the panel to a frame
+		add(panel);
+		pack();
+		setVisible(true);
+	}
+	
+	public static void main(String[] arguments)
+	{
+		IconFrame ike = new IconFrame();
+	}
+
+}
